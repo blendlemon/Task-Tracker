@@ -40,3 +40,4 @@ class Task:
         for task in tasklist:
             if task.status == status:
                 print(vars(task))
+                

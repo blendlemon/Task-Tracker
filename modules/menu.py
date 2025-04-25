@@ -4,16 +4,14 @@ tasklist = []
 while True:
     option = input("").lower()
     option = option.split(" ")
-    print(option)
 
     match option[0]:
         case "add":
             tasklist.append(Task (" ".join(option[1:])))
         
         case "mark-in-progress" | "mark-done":
-            print("hla")
             id = int(option[1])
-            status = option[0][3::]
+            status = option[0][5::]
             print(status)
             Task.SearchTask(tasklist,id).UpdateStatus(status)
 
